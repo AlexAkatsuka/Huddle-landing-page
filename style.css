@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
-
-:root {
-  --violetStyle: hsl(257, 40%, 49%);
-  --softMagentaStyle: hsl(300, 69%, 71%);
+ :root {
+    --violetStyle: hsl(257, 40%, 49%);
+    --softMagentaStyle: hsl(300, 69%, 71%);
 }
+
 
 /*<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -12,71 +12,173 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
   */
-  *{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
-  }
+}
 
-.textoBranco{
+.textoBranco {
     color: white;
 }
-header{
-  margin-left: 80px;
-  margin-top: 50px;
+
+body {
+    background-color: var(--violetStyle);
+    background-image: url(/images/bg-desktop.svg);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    max-width: 1440px;
 }
-body{ 
-  background-color: var(--violetStyle);
-  background-image: url(/images/bg-desktop.svg);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 12px;
-  max-width: 1440px;
+
+header {
+    margin-left: 20px;
+    margin-top: 50px;
 }
-.container{
-  margin-top: 80px;
-  margin-left: 80px;
+
+
+/* Grid */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    height: 400px;
 }
-button{
-  padding-top: 10px;
-  padding-right: 40px;
-  padding-bottom: 10px;
-  padding-left: 40px;
-  border-radius: 20px;
-  display: inline-block;
-  transition-duration: 0.4s;
-  cursor: pointer;
+
+.start {
+    align-content: start;
 }
+
+.end {
+    align-content: end;
+}
+
+.center {
+    align-content: center;
+}
+
+.stretch {
+    grid-template-columns: auto;
+    align-content: stretch;
+}
+
+.space-around {
+    align-content: space-around;
+}
+
+.space-between {
+    align-content: space-between;
+}
+
+.space-evenly {
+    align-content: space-evenly;
+}
+
+.item-1,
+.item-2 {
+    grid-row: span 3;
+}
+
+.item-3 {
+    grid-column: span 2;
+}
+
+
+/* Grid Item */
+
+.item {
+    margin: 5px;
+    font-size: 1.5em;
+}
+
+.grid {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+body {
+    font-family: monospace;
+    color: #333;
+    padding-bottom: 20px;
+    margin: 0px;
+}
+
+body>div {
+    padding: 40px 0;
+}
+
+button {
+    padding-top: 10px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-left: 40px;
+    border-radius: 20px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.4);
+    ;
+}
+
 .button1 {
-  background-color: white; 
-  color: var(--violetStyle); 
-  border: 2px solid var(--softMagentaStyle);
+    margin-top: 60px;
+    text-align: center;
+    background-color: white;
+    color: var(--violetStyle);
+    border: 2px solid var(--softMagentaStyle);
 }
+
 .button1:hover {
-  background-color: var(--softMagentaStyle);
-  color: white;
+    background-color: var(--softMagentaStyle);
+    color: white;
 }
+
 .button2 {
-  background-color: white; 
-  color: hsl(228, 45%, 44%); 
-  border: 2px solid ;
+    background-color: white;
+    color: hsl(228, 45%, 44%);
+    border: 2px solid;
 }
+
 .button2:hover {
-  background-color: var(--softMagentaStyle);
-  color: white;
+    background-color: var(--softMagentaStyle);
+    color: white;
 }
-.icon{
-  font-size: 30px;
-  margin-right: 50px;
-  display: inline-block;
-  transition-duration: 0.4s;
-  cursor: pointer;
+
+.icon {
+    text-underline-position: auto;
+    font-size: 30px;
+    margin-right: 50px;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
-footer{
-  text-align: center;
-  font-size: 15px;
-  margin-bottom: 50px;
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 50px;
+    display: grid;
+    width: 87.84%;
 }
-.Headings{
-  font-family: 'Poppins', sans-serif;
+
+.Headings {
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.box2 {
+    margin-top: 20px;
+}
+
+.h2 {
+    padding-top: 20px;
+}
+
+.h3 {
+    padding-top: 50px;
 }
